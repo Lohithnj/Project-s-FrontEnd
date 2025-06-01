@@ -1,0 +1,83 @@
+/* RidePublishPage.css */
+
+.ride-confirmation-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .ride-confirmation-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .ride-details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ride-detail-label {
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .ride-detail-value {
+    color: #2c3e50;
+  }
+  
+  .publish-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .publish-button:hover {
+    background-color: #3e8e41;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(62, 142, 65, 0.3);
+  }
+  
+  .publish-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Status indicators */
+  .status-true {
+    color: #27ae60;
+  }
+  
+  .status-false {
+    color: #e74c3c;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 640px) {
+    .ride-confirmation-container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .ride-details {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }

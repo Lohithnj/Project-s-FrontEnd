@@ -1,0 +1,280 @@
+/* SearchResultsPage.css */
+
+.search-results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .search-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+  }
+  
+  .search-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .no-rides {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+  }
+  
+  .ride-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+  }
+  
+  .ride-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .ride-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #00aaff;
+  }
+  
+  .driver-info {
+    flex-grow: 1;
+  }
+  
+  .driver-name {
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 3px;
+  }
+  
+  .rating {
+    color: #ffb400;
+    font-size: 14px;
+  }
+  
+  .route-summary {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .route-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .route-time::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #ddd;
+    z-index: 1;
+  }
+  
+  .route-time .time {
+    margin: 0 15px;
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .route-time .car-icon {
+    color: #00aaff;
+    font-size: 20px;
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .route-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+  }
+  
+  .route-location .location {
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .route-location .separator {
+    margin: 0 10px;
+    color: #00aaff;
+    font-weight: bold;
+  }
+  
+  .ride-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ride-meta {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .meta-item .meta-icon {
+    margin-right: 5px;
+    color: #00aaff;
+    font-size: 14px;
+  }
+  
+  .ride-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .ride-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 10px;
+  }
+  
+  .book-button {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .book-button:hover {
+    background: #0088cc;
+  }
+  
+  @media (max-width: 600px) {
+    .ride-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .profile-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
+    .ride-footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .ride-meta {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .ride-actions {
+      width: 100%;
+      align-items: center;
+    }
+
+    /* Booking Confirmation Modal Styles */
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .confirmation-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .confirmation-icon {
+    color: #4BB543;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-modal h2 {
+    color: #2d2d2d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .confirmation-modal p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .confirmation-button {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+  }
+  
+  .confirmation-button:hover {
+    background: #0088cc;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+    
+  }

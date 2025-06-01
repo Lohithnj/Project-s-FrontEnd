@@ -9,8 +9,9 @@ function RoleSelection() {
 
   const handleSelectRole = (role) => {
     sessionStorage.setItem('role', role);
+    //sessionStorage.setItem('rideid',rideId);
     if (role === 'CUSTOMER') {
-      navigate('/customer/dashboard');
+      navigate('/customer-search');
     } else if (role === 'OWNER') {
         navigate("/publish");
     }

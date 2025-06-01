@@ -7,6 +7,7 @@ function LoginForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
 
+  
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -19,8 +20,9 @@ function LoginForm() {
       
       // Save user email or ID for session if needed
       sessionStorage.setItem('userEmail', formData.email);
-  
-      // 👇 REDIRECT to role selection after login
+      
+      //sessionStorage.setItem('userId',userId);
+      //  REDIRECT to role selection after login
       window.location.href = '/select-role';
   
     } catch (err) {

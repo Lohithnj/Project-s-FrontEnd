@@ -1,0 +1,157 @@
+/* GenderPreferenceForm.css */
+
+/* Base Container */
+.gender-preference-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .gender-preference-form-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  /* Form Styling */
+  .gender-preference-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group > label {
+    font-weight: 500;
+    color: #34495e;
+    font-size: 1rem;
+  }
+  
+  /* Radio/Checkbox Groups */
+  .form-group > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+  
+  .form-group label:hover {
+    background: #e8f4fc;
+    transform: translateY(-2px);
+  }
+  
+  /* Input Styling */
+  input[type="radio"],
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #bdc3c7;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  input[type="checkbox"] {
+    border-radius: 4px;
+  }
+  
+  input[type="radio"]:checked,
+  input[type="checkbox"]:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+  
+  input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Button Styling */
+  .submit-button {
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.3);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Emoji Styling */
+  label span {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .gender-preference-form-container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  
+    .form-group > div {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    label {
+      width: 100%;
+    }
+  }

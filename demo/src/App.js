@@ -9,9 +9,16 @@ import OtpVerifyForm from './components/OtpVerifyForm';
 import UserDetailsForm from './components/UserDetailsForm';
 import PublishRideForm from "./components/PublishRideForm";
 import RouteWithStopovers from './components/RouteWithStopovers';
-
+import FareCalculationPage from './components/FareCalculationPage'; // Import the page
+import VehicleDetailsForm from './components/VehicleDetailsForm';
+import GenderPreferenceForm from './components/GenderPreferenceForm';
+import RidePublishPage from './components/RidePublishPage';
+import CustomerSearchPage from './components/CustomerSearchPage';
+import SearchResultsPage from './components/SearchResultsPage';
+import BookingSuccessPage from './components/BookingConfirmation';
 function App() {
   const [emailSentTo, setEmailSentTo] = useState("");
+
 
   return (
     <Router>
@@ -21,8 +28,14 @@ function App() {
         <Route path="/select-role" element={<RoleSelector />} />
         <Route path="/publish" element={<PublishRideForm />} />
         <Route path="/route" element={<RouteWithStopovers />} />
+        <Route path="/calculateFare" element={<FareCalculationPage />} />
+        <Route path="/vehicle" element={<VehicleDetailsForm />} />
+        <Route path="/gender-preference" element={<GenderPreferenceForm />} />
+        <Route path="/done" element={<RidePublishPage />} />
+        <Route path="/customer-search" element={<CustomerSearchPage />} />
+        <Route path="/searchResults" element={<SearchResultsPage />} />
 
-
+<Route path="/bookingSuccess" element={<BookingSuccessPage />} />
         <Route
           path="/otp"
           element={

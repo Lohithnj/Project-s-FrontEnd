@@ -1,0 +1,109 @@
+.route-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .route-map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .stopover-section {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stopover-section h4 {
+    margin-bottom: 20px;
+    color: #2d3748;
+    font-size: 1.2rem;
+  }
+  
+  .stopover-input {
+    margin-bottom: 15px;
+  }
+  
+  .stopover-input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .stopover-input input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  }
+  
+  button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #3182ce;
+  }
+  
+  button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn {
+    background-color: #38a169;
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2f855a;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .route-container {
+      padding: 15px;
+    }
+    
+    .route-map {
+      height: 350px;
+    }
+    
+    .stopover-section {
+      padding: 20px;
+    }
+  }
+  
+  /* Animation for stopover inputs */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .stopover-input {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
